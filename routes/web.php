@@ -19,8 +19,9 @@ $router->get('/', function () use ($router) {
 });
 
 $router->group(['prefix' => 'api'], function () use ($router) {
-    $router->get('/kpi/ciclo-compras', 'KPIController@tiempoCicloCompras');
-    $router->get('/kpi/volumen-ventas', 'KPIController@getVolumenVentas');
-    $router->get('/kpi/ingresos-ventas', 'KPIController@getIngresosVentas');
+    $router->get('/kpi/delivery-time-average', 'KPIController@supplierDeliveryTimeAverage');
+    $router->get('/kpi/best-seller-products', 'KPIController@bestSellerProducts');
+    $router->get('/kpi/income-year', 'KPIController@getIncomePerYear');
+    $router->get('/kpi/last-sales', 'KPIController@getLastSales');
 });
 
